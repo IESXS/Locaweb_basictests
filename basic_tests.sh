@@ -1,5 +1,7 @@
 #!/bin/sh
 #basic tests of shared hosting on linux servers at Locaweb
+#Obtém o usuário FTP
+ftpuser=$(pwd | rev | cut -d '/' -f 1 | rev)
 clear
 echo "
 ██       ██████   ██████  █████  ██     ██ ███████ ██████
