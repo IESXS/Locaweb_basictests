@@ -38,7 +38,7 @@ echo "Qual versão de PHP o cliente vai querer usar?"
 read phpver
 echo "vai forçar o uso do HTTPS?, se sim, informe o dominio para o redirecionamento:"
 read domainssl
-echo "Copie o conteudo a ser mostrado e cole no seu .htaccess"
+
 
 echo "
 AddHandler php$phpver-script .php
@@ -65,5 +65,9 @@ RewriteRule . /site_in/index.php [L]
 
 # END WordPress
 "
-read 
+echo ""
+echo "--------------------------"
+echo "Copie o conteudo a ser mostrado e cole no seu .htaccess"
+read prompthtaccess
+
 vim ~/public_html/.htaccess
