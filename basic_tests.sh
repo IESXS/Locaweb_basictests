@@ -40,7 +40,6 @@ echo "vai forçar o uso do HTTPS?, se sim, informe o dominio para o redirecionam
 read domainssl
 echo "Copie o conteudo a ser mostrado e cole no seu .htaccess"
 
-
 echo "
 AddHandler php$phpver-script .php
 suPHP_ConfigPath /$ftpuser/
@@ -65,5 +64,6 @@ RewriteRule . /site_in/index.php [L]
 
 
 # END WordPress
-" 
+"
+read 
 vim ~/public_html/.htaccess
