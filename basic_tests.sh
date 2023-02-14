@@ -28,7 +28,7 @@ read phpver
 echo "vai forçar o uso do HTTPS?, se sim, informe o dominio para o redirecionamento:"
 read domainssl
 
-cat > .htacces <<EOF
+cat > .htaccess <<EOF
 ##### LOCAWEB - NAO REMOVER #####
 AddHandler php$phpver-script .php
 suPHP_ConfigPath /$ftpuser/
