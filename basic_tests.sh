@@ -16,8 +16,8 @@ echo "------------------ Ajustes no php.ini -------------------"
 echo "para qual usuario de ftp esta realizando o ajuste?"
 read ftpuser
 
-mv php.ini php.ini_cliente123 && cp/etc/php.ini . &&
-wget http://raw.githubusercontent.com/IESXS/Locaweb_basictests/main/php.ini
+mv php.ini php.ini_cliente123 
+curl -O https://raw.githubusercontent.com/IESXS/Locaweb_basictests/main/php.ini
 
 echo "----------------- Ajustes no htaccess -------------------"
 echo "Aperte enter para realizar a alteração do htaccess"
