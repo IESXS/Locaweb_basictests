@@ -60,7 +60,22 @@ suPHP_ConfigPath /$ftpuser/
 
 #RewriteEngine On
 #RewriteCond %{SERVER_PORT} 80
-#RewriteRule ^(.*)$ https://www.$domainssl/$"1 [R,L]
+#RewriteRule ^(.*)$ https://www.$domainssl/$1 [R,L]
+
+# BEGIN WordPress
+# As diretrizes (linhas) entre `BEGIN WordPress` e` END WordPress` são
+# geradas dinamicamente e só devem ser modificadas através de filtros do WordPress.
+# Quaisquer alterações nas diretivas entre esses marcadores serão sobrescritas.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /site_in/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /site_in/index.php [L]
+</IfModule>
+# END WordPress
+
 EOF
 
 #cria um info.php para validar alterações no php.ini e .htaccess, como versão de php, ou diretivas;
