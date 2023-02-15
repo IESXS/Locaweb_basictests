@@ -35,14 +35,15 @@ mv .htaccess .htaccess_$(date +'%Y_%m_%d')
 echo "-----------------------------------"
 echo "Qual versão de PHP o cliente vai querer usar?"
 echo "Versões de PHP disponiveis:
-        php 5.6 - "56"
-        php 7.0 - "70"
-        php 7.1 - "71"
-        php 7.2 - "72"
-        php 7.3 - "73"
-        php 7.4 - "74"
-        php 8.0 - "80" 
+        php 5.6 - '56'
+        php 7.0 - '70'
+        php 7.1 - '71'
+        php 7.2 - '72'
+        php 7.3 - '73'
+        php 7.4 - '74'
+        php 8.0 - '80' 
      "
+echo "digite a versão desejada:"
 read phpver
 
 #esta parte serve para deixar as linhas para forçar SSL semiprontas;
