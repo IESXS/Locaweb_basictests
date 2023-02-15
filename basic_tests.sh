@@ -60,7 +60,7 @@ suPHP_ConfigPath /$ftpuser/
 
 #RewriteEngine On
 #RewriteCond %{SERVER_PORT} 80
-#RewriteRule ^(.*)$ https://www.$domainssl/$1 [R,L]
+#RewriteRule ^(.*)$ https://www.$domainssl/$"1 [R,L]
 EOF
 
 #cria um info.php para validar alterações no php.ini e .htaccess, como versão de php, ou diretivas;
